@@ -1,0 +1,247 @@
+body{ 
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+header{
+	width: 100%;
+	height: 100px;
+	
+}
+header nav{
+	float: right;
+	overflow: none;
+	width: 800px;
+	margin-top:40px;
+}
+header h1{
+	float: left;
+	font-variant: small-caps;
+        
+	font-size: 35px;
+}
+header img{
+	float: left;
+	background: green ;
+	width: 150px;
+	margin:-25px 22px 50px 22px;
+}
+h1{
+	font-variant: small-caps;
+        
+	font-size: 35px;
+	
+}
+nav a{
+	width: 15%;
+	height: 10%;
+	padding: 1%;
+	margin: 5%;
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	border-radius: 110%;
+}
+nav a:hover{
+	color: red;
+}
+.current{
+	color: red;
+}
+.first{
+	height:800px;
+}
+.first::before{
+	content: "";
+	position: absolute;
+	top:100px;
+	left:0px;
+	bottom:-150px;
+	right:0px;
+	opacity: 0.85;
+	background-image: url("../images/home.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.first a{
+	position: absolute;
+	text-decoration: none;
+
+	top: 500px;
+	left: 700px;
+        
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.first a:hover{
+    cursor: pointer;
+    background: #ffc107;
+
+    color: #000;
+
+}
+blockquote{
+	position: absolute;
+	top: 80px;
+        color: #e91e63 ;
+	font-size: 50px;
+	font-style: italic;
+	font-weight: bold;
+        
+}
+p{
+	display: inline-block;
+        
+	width: 600px;
+	float: left;
+	font-size: 30px;
+}
+article img{
+	width: 500px;
+	height: 500px;
+	border:black solid; 
+	display: inline-block;
+	margin-left: 150px;
+
+}
+
+footer{
+	background:linear-gradient(#d8b5ff,#1eae98);
+	background-color: #4b6977;
+	color: white;
+	font-size: 20px;
+}
+
+
+
+#adminbody{
+
+    background-image: url(../images/pic1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#userbody{
+    background-image: url(../images/pic2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.loginbox{
+    width: 450px;
+    height: 420px;
+    color: white;
+    top: 120px;
+    left: 40%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 50px);
+}
+
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="button"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: white;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+
+#middle{
+	padding-left: 140px;
+	font-size: 25px;
+}
+
+#userlogin{
+	display: block;
+}
+
+#usersignup{
+	display: none;
+}
+
+#adminlogin{
+	display: block;
+}
+
+#adminsignup{
+	display: none;
+}
