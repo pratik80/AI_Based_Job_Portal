@@ -1,0 +1,60 @@
+<html>
+<head>
+
+    <title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+    
+<body id='userbody' >
+    <header>
+        <img src="../static/images/logo.jpg">
+        <h1 >JOB PORTAL</h1>
+        <nav>
+            
+            
+            <a href="User.html" class="current">WELCOME TO JOB PORTAL</a>
+            
+        </nav>
+
+    </header>
+    <img src="../static/images/avatar.png" class="avatar">
+    <div class="loginbox">
+
+        {% if check1 %}
+          <script>alert("Username is already taken. please enter unique one")</script> 
+        {% elif check2 %}
+          <script>alert("Enter valid Username or Password")</script>          
+        {% endif %}
+
+        <form id="userlogin" action="User.html" method="post"> 
+            <h1 style="color: black;">APPLICANT LOGIN</h1>
+
+            <p style="color: black;">Email</p>
+            <input style="color: black;" type="text" name="email" placeholder="Enter Email">
+            <p style="color: black;">Password</p>
+            <input style="color: black;" type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="" value="LOGIN">
+      <p id="middle">OR</p><br><br><br>
+            <input type="button" name="" value="Create an account" onclick="Show()">
+            <a href="Admin.html">Are you a Recruiter?</a><br>      
+  
+            
+        </form>
+        <form id="usersignup" action="User.html" method="post">
+            <h1 style="color: black;">APPLICANT SIGNUP</h1>
+            <p style="color: black;">Email</p>
+            <input style="color: black;" type="text" name="newemail" placeholder="Enter Email">
+            <p style="color: black;">Password</p>
+            <input style="color: black;" type="password" name="newpassword" placeholder="Enter Password">
+            <input type="submit" name="" value="SIGNUP">
+            <p id="middle">OR</p><br><br><br>
+            <input type="button" name="" value="Already have an account" onclick="Hide()">
+            <a href="Admin.html">Are you a Recruiter?</a><br>
+        </form> 
+    </div>
+
+    <script type="text/javascript" src="../static/js/events.js"></script>
+    
+</body>
+</head>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style>body{
+    background-image: url("../static/images/job2.jpg");
+    background-repeat: no-repeat;
+        background-size: cover;
+         ;
+}
+</style>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/style1.css">
+
+
+  <title>JOB PORTAL</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg  navbar-light ">
+    <h1>JOB PORTAL</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link active" href="home_rec.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="jobnotice.html">Job Notice</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="shortlist.html">Shortlist</a>
+        </li>
+
+
+      </ul>
+      <button type="button" class="btn btn-danger btn mt-2" onclick="location.href = 'Admin.html';">Logout</button>
+      
+    </div>
+  </nav>
+</header>
+
+<body>
+  {% if check %}
+  <div class="container shadow p-3 mb-5 bg-body rounded" style="background-color: white;">
+    <h5>No one has applied till now.</h5>
+  {% else %}
+  <div class="container shadow p-3 mb-5 bg-body rounded" style="background-color: white;">
+    <h2>Shortlisted Candidates</h2>
+    <table class="table table-bordered border-danger">
+        <thead>
+          <th scope="col" class="table-light rounded">Sr No
+            <th scope="col" class="table-light rounded">Resume
+            </th>
+            
+        </thead>
+        <tbody>
+          {% for applicant in applicants %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td><a href="../static/jobResumes/{{applicant.Aemail}}.pdf" target="_blank" >{{applicant.Aemail}}</a></td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+
+
+      </table> 
+  </div>
+  {% endif %}
+
+
+
+
+</html>
